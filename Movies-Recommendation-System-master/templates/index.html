@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+
+
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
+<head>
+<title>MoviesDuo</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="{{ url_for('static',filename='styles/layout.css')}}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+
+<div class="bgded overlay" style="background-image:url({{ url_for('static', filename='image/home_cover.jpg') }})">
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="http://127.0.0.1:5000/">MoviesDuo</a></h1>
+      </div>
+      <!-- ################################################################################################ -->
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a class="test" href="#myModal" data-toggle="modal" data-target="#myModal">Movie Recommender</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+
+
+  <div id="pageintro" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <article>
+      <h3 class="heading">Locate Movies of your Interest!</h3>
+      <p>This platform will recommend movies based on your Interest.</p>
+    </article>
+    <!-- ################################################################################################ -->
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+<div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <h4 class="modal-title" style="font-size:2em;color:black;">Movie Recommender</h4>
+    </div>
+    <div class="modal-body">
+      <form action="/recommendation" method="POST">
+  <div class="form-group">
+    <p style="color:black;">Enter Your Favourite Movie:</p>
+    <input class="form-control" id="movie_name" name="movie">
+  </div>
+  <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#finalModal">Show Results</button>
+</form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <section id="introblocks">
+      <div class="sectiontitle">
+        <h6 class="heading" style="font-size:4em;">Top Movies</h6>
+        <p>Movies based on high popularity</p>
+      </div>
+      <ul class="nospace group">
+        <li class="one_quarter first">
+          <article><a href="#"><image src="{{ url_for('static',filename='image/minions.jpg')}}"></a>
+            <h6 class="heading">Minions</h6>
+            <p>Minions Kevin, Stuart and Bob decide to find a new master. They embark on a global trip and meet Scarlett Overkill, a female super-villain who recruits them and hatches a plan to take over the world.</p>
+
+          </article>
+        </li>
+        <li class="one_quarter">
+          <article><a href="#"><image src="{{ url_for('static',filename='image/interstellar.jpg')}}"></a>
+            <h6 class="heading">Interstellar</h6>
+            <p>When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
+
+          </article>
+        </li>
+        <li class="one_quarter">
+          <article><a href="#"><image src="{{ url_for('static',filename='image/deadpool.jpeg')}}"></a>
+            <h6 class="heading">Deadpool</h6>
+            <p>Ajax, a twisted scientist, experiments on Wade Wilson, a mercenary, to cure him of cancer and give him healing powers. However, the experiment leaves Wade disfigured and he decides to exact revenge.</p>
+          </article>
+        </li>
+        <li class="one_quarter">
+          <article><a href="#"><image src="{{ url_for('static',filename='image/guardians.jpg')}}"></a>
+            <h6 class="heading">Guardians of the Galaxy</h6>
+            <p>Peter escapes from the planet Morag with a valuable orb that Ronan the Accuser wants. He eventually forms a group with unwilling heroes to stop Ronan.</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <section id="references" class="hoc container clear">
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading" style="font-size:4em;">Movies Analysis</h6>
+      <p>Following is the analysis conducted on Movies Data.</p>
+    </div>
+    <image src="{{ url_for('static',filename='image/Dashboard 1.png')}}"
+    <!-- ################################################################################################ -->
+  </section>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+
+
+<script type="text/javascript" src="{{ url_for('static',filename='scripts/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='scripts/jquery.backtotop.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static',filename='scripts/jquery.mobilemenu.js')}}"></script>
+</body>
+</html>
